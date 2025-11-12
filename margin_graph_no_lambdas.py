@@ -1,5 +1,5 @@
 """
-    A multiprocessing-safe shortend version of MarginGraph.
+    A multiprocessing-safe (pickle-able) shortend version of MarginGraph.
 """
 
 import networkx as nx

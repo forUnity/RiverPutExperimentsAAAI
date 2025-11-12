@@ -33,6 +33,7 @@ def generate_data():
     M = list(range(5,51, 1))# + [100, 200]
 
 
+    #this range was chosen to not lengthen the filename too much
     seed_seed = random.randint(0, 1_000) # we got 574 here on our first run.
     random.seed(seed_seed)
     output_dir = root_dir + f"seed={seed_seed}_varyn_model=mallowsnorm_phi=0.35_CW=no/"

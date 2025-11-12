@@ -393,7 +393,7 @@ def scatter_data_exp(results: list[Result]) -> None:
 
 def analyze_p_methods() -> None: 
     #ANALYZE P METHODS
-    file_path = "export/rerun_results.csv"
+    file_path = "new_results_m=[5,10,20]_asyncs.csv"
     results = load_results_from_file(file_path)
 
     filter_for_methods = ["RiverFun","BeatPathFW", "StableVotingCW", "SplitCycleFW"]

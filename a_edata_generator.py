@@ -5,7 +5,7 @@ from pref_voting.generate_profiles import generate_profile
 
 from pref_voting.io.writers import write_preflib
 
-from b_voting_methods_timeout import m_list_name
+from b_run_voting_methods import m_list_name
 import random
 
 import os

@@ -6,7 +6,6 @@ This repo archives the code for the experiments on the River FUN algorithm. Rive
 2. Run voting methods on the generated elections with b_run_voting_methods.py. Which voting methods are run with what timeout can be adjusted in code.
 3. Run d_analysis.py to get plots of the resulting data. Adjust the path to point to the data.
 
-Adjust the path variable in each script to point to the result of the previous script (as the seed is in the file name).
 
 ## To reproduce our results
-Our run of a_edata_generator.py used a seed of 574. Everything else can be run as is.
+Our run of a_edata_generator.py used a seed of 574. Everything else can be run as is. Adjust the path variable in each script to point to the result of the previous script (as the seed is in the file name).

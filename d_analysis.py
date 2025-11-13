@@ -441,6 +441,10 @@ def analyze_exp_methods() -> None:
     scatter_data_exp(results)
 
 export_results_folder = "export/"
+import os
+if not os.path.exists(export_results_folder):
+    os.makedirs(export_results_folder, exist_ok=True)
+
 if __name__ == "__main__":
     # analyze_p_methods()
     analyze_exp_methods()

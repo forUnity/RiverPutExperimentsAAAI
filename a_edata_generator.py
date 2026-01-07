@@ -16,6 +16,7 @@ give_up_after_tries_for_m = 50_000
 def generate_election(seed, num_candidates, num_voters):
     # Mallows 
     # beware: mallows with variying n may mislead. Boehmer et al. 2023. Use 0.35 as closest to some real elections
+    #Later Comment: Note that https://arxiv.org/pdf/2105.07815 recommends 0.35 for relphi, not norm-ph. In Drawing a map of elections: for normalized mellows: between 0.7 and 0.8 - https://www.sciencedirect.com/science/article/pii/S0004370225000517
     profiles = generate_profile(num_candidates, num_voters,
                         probmodel="mallows",
                         phi=0.35,#0.5

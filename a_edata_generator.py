@@ -19,7 +19,7 @@ def generate_election(seed, num_candidates, num_voters):
     #Later Comment: Note that https://arxiv.org/pdf/2105.07815 recommends 0.35 for relphi, not norm-ph. In Drawing a map of elections: for normalized mellows: between 0.7 and 0.8 - https://www.sciencedirect.com/science/article/pii/S0004370225000517
     profiles = generate_profile(num_candidates, num_voters,
                         probmodel="mallows",
-                        phi=0.35,#0.5
+                        phi=0.7,#0.5
                         normalise_phi=True,
                         seed=seed)
     #Urn
@@ -35,9 +35,9 @@ def generate_data():
 
 
     #this range was chosen to not lengthen the filename too much
-    seed_seed = random.randint(0, 1_000) # we got 574 here on our first run.
+    seed_seed = random.randint(0, 1_000) # we got 785 here on our first run for mallows phi=0.7
     random.seed(seed_seed)
-    output_dir = root_dir + f"seed={seed_seed}_varyn_model=mallowsnorm_phi=0.35_CW=no/"
+    output_dir = root_dir + f"seed={seed_seed}_varyn_model=mallowsnorm_phi=0.7_CW=no/"
     os.makedirs(output_dir, exist_ok=True)
 
     for n in N:

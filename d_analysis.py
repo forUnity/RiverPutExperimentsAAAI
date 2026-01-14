@@ -393,7 +393,7 @@ def scatter_data_exp(results: list[Result]) -> None:
 
 def analyze_p_methods() -> None: 
     #ANALYZE P METHODS
-    file_path = "new_results_m=[5,10,20]_asyncs.csv"
+    file_path = "data/seed=785_varyn_model=mallowsnorm_phi=0.7_CW=no/new_results_m=[5-50]_async.csv"
     results = load_results_from_file(file_path)
 
     filter_for_methods = ["RiverFun","BeatPathFW", "StableVotingCW", "SplitCycleFW"]
@@ -404,8 +404,8 @@ def analyze_p_methods() -> None:
     results = [r for r in results if r.n not in filter_out_N]
 
     #removed pairs with less generated instances according to the cw_ratios
-    remove_m_and_n_pair = [(5,100), (5,200), (6,200), (7,200), (8,200), (9,200)]
-    results = [r for r in results if (r.m, r.n) not in remove_m_and_n_pair]
+    # remove_m_and_n_pair = [(5,100), (5,200), (6,200), (7,200), (8,200), (9,200)]
+    # results = [r for r in results if (r.m, r.n) not in remove_m_and_n_pair]
 
     results = rename_method(results, "RankedPairsBasic", "Ranked Pairs")
     results = rename_method(results, "RiverFun", "River FUN")
@@ -416,7 +416,7 @@ def analyze_p_methods() -> None:
 
 def analyze_exp_methods() -> None:
     #ANALYZE EXPERIMENT METHODS
-    file_path = "export/rerun_results.csv"
+    file_path = "data/seed=785_varyn_model=mallowsnorm_phi=0.7_CW=no/new_results_m=[5-50]_async.csv"
     results = load_results_from_file(file_path)
 
 
@@ -431,8 +431,8 @@ def analyze_exp_methods() -> None:
     # results = [r for r in results if r.n not in filter_out_N]
 
     #removed pairs with less generated instances according to the cw_ratios
-    remove_m_and_n_pair = [(5,100), (5,200), (6,200), (7,200), (8,200), (9,200)]
-    results = [r for r in results if (r.m, r.n) not in remove_m_and_n_pair]
+    # remove_m_and_n_pair = [(5,100), (5,200), (6,200), (7,200), (8,200), (9,200)]
+    # results = [r for r in results if (r.m, r.n) not in remove_m_and_n_pair]
 
     results = rename_method(results, "RankedPairsBasic", "Ranked Pairs (RP-PUT)")
     results = rename_method(results, "RiverFun", "River FUN")
@@ -446,6 +446,6 @@ if not os.path.exists(export_results_folder):
     os.makedirs(export_results_folder, exist_ok=True)
 
 if __name__ == "__main__":
-    # analyze_p_methods()
+    analyze_p_methods()
     analyze_exp_methods()
 

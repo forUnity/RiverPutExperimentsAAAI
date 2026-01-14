@@ -309,7 +309,7 @@ if __name__ == "__main__":
     sys.stderr = open("error", "w")
     import multiprocessing
     multiprocessing.set_start_method('spawn', force=True)
-    folder_path = "data/seed=574_varyn_model=mallowsnorm_phi=0.35_CW=no/"
+    folder_path = "data/seed=785_varyn_model=mallowsnorm_phi=0.7_CW=no/"
     setting_async = True
     # timeout_in_s = 30 * 60 #for EXP
     # timeout_in_s = 5 * 60 #for P
